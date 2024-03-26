@@ -5,3 +5,5 @@ export const TWEET_LINK = 'https://twitter.com/#!/jeresig/status/339687049831383
 export const GH_LINK = 'https://github.com/';
 
 export const LOCALE_UA = 'uk-UA';
+
+export const ROUTES = { HOME: '/', USER: ':username' };

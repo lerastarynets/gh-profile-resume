@@ -1,11 +1,12 @@
 import { Button, Typography } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
+import { ROUTES } from '../../utils/constants';
 
 export const NotFound = () => {
     const navigate = useNavigate();
     const { username } = useParams();
 
-    const handleBackClick = () => navigate('/');
+    const handleBackClick = () => navigate(ROUTES.HOME);
 
     return (
         <>
