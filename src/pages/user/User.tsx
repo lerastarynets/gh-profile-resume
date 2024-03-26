@@ -3,6 +3,7 @@ import { UserLoaderReturnType } from '../../types/common';
 import { Typography } from '@mui/material';
 import { formatDate } from '../../utils/helpers';
 import { LanguagesStatistics } from './components';
+import { ReposList } from './components/ReposList';
 
 export const User = () => {
     const { user } = useLoaderData() as UserLoaderReturnType;
@@ -22,7 +23,7 @@ export const User = () => {
             {!!public_repos && (
                 <>
                     <LanguagesStatistics />
-                    <div>repos</div>
+                    <ReposList />
                 </>
             )}
         </>
