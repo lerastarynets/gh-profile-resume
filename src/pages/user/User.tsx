@@ -2,6 +2,7 @@ import { useLoaderData } from 'react-router-dom';
 import { UserLoaderReturnType } from '../../types/common';
 import { Typography } from '@mui/material';
 import { formatDate } from '../../utils/helpers';
+import { LanguagesStatistics } from './components';
 
 export const User = () => {
     const { user } = useLoaderData() as UserLoaderReturnType;
@@ -20,7 +21,7 @@ export const User = () => {
             </section>
             {!!public_repos && (
                 <>
-                    <div>langs</div>
+                    <LanguagesStatistics />
                     <div>repos</div>
                 </>
             )}
