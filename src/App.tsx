@@ -2,6 +2,7 @@ import { Params, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { getUser, getUserRepos } from './utils/api';
 import { CircularProgress } from '@mui/material';
 import { NotFound } from './pages/notFound';
+import { Home } from './pages/home';
 
 const userLoader = async ({ params: { username } }: { params: Params<'username'> }) => {
     const [user, repos] = await Promise.all([getUser(username!), getUserRepos(username!)]);
@@ -11,7 +12,7 @@ const userLoader = async ({ params: { username } }: { params: Params<'username'>
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <div />,
+        element: <Home />,
     },
     {
         path: ':username',
