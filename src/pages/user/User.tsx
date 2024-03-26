@@ -13,7 +13,9 @@ export const User = () => {
 
     return (
         <>
-            <Typography variant="h3">{displayName}</Typography>
+            <Typography align="center" variant="h3">
+                {displayName}
+            </Typography>
             <section>
                 <Typography variant="h6">On GitHub since {formatDate(created_at)}</Typography>
                 <Typography variant="h6">Has {followers} followers</Typography>
