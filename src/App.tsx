@@ -3,6 +3,7 @@ import { getUser, getUserRepos } from './utils/api';
 import { CircularProgress } from '@mui/material';
 import { NotFound } from './pages/notFound';
 import { Home } from './pages/home';
+import { User } from './pages/user';
 
 const userLoader = async ({ params: { username } }: { params: Params<'username'> }) => {
     const [user, repos] = await Promise.all([getUser(username!), getUserRepos(username!)]);
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     },
     {
         path: ':username',
-        element: <div />,
+        element: <User />,
         errorElement: <NotFound />,
         loader: userLoader,
     },
